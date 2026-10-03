@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient background */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents overflow from falling flowers */
+}
+
+/* Wrapper with 3D Glass Effect */
+#wrapper {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px); /* Blurred background for glass effect */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Adds depth */
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    transform: perspective(800px) rotateY(5deg); /* 3D rotation */
+    transition: transform 0.5s; /* Smooth transition */
+}
+
+#wrapper:hover {
+    transform: perspective(800px) rotateY(0deg); /* Removes rotation on hover */
+}
+
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for modern browsers */
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensures proper clipping */
+}
+
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+}
+
+/* Button Styling */
+.guessSubmit {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Gradient button */
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth interaction */
+}
+
+.guessSubmit:hover {
+    transform: scale(1.1); /* Button enlarges slightly */
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5); /* Glow effect */
+}
+
+/* Results Section */
+.resultParas {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Light background */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
+}
+
+/* Glowing Animation Effect for Results */
+.lowOrHi h2 {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #fff, 0 0 10px #ff416c; } /* Light glow */
+    to { text-shadow: 0 0 10px #fff, 0 0 20px #ff4b2b; } /* Strong glow */
+}
+
+

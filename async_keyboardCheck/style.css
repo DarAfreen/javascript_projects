@@ -1,0 +1,99 @@
+/* Apply a smooth background gradient */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Centering main container */
+  .project {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  /* Glassmorphism effect for the key display */
+  #insert {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);  /* Makes the background blurry (glass effect) */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Initial text before a key is pressed */
+  .key {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners are visible */
+  }
+  
+  /* Table headers */
+  th {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    font-size: 18px;
+  }
+  
+  /* Table cells */
+  td {
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-align: center;
+  }
+  
+  /* Alternate row styling */
+  tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Animation for key press effect */
+  .color {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    table {
+      font-size: 16px;
+    }
+  
+    th,
+    td {
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,105 @@
+/* Overall layout for the code editor container */
+.code-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Code input area styling */
+.code-input {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Line numbers styling */
+#line-numbers {
+    background-color: #f0f0f0;
+    color: #888;
+    text-align: right;
+    padding: 10px;
+    width: 40px;
+    font-size: 14px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+/* Monaco editor container (code input area) */
+#code-input {
+    flex: 1;
+    background-color: #272822; /* Dark background for code editor */
+    color: #f8f8f2;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-left: none;
+    border: none;
+}
+
+/* Styling for the code output */
+.code-output {
+    background-color: #f7f7f7;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 100px;
+    white-space: pre-wrap; /* Preserve whitespace */
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+/* Error list styling */
+.error-list {
+    background-color: #ffdddd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    white-space: pre-wrap;
+}
+
+
+#run-btn {
+    background-color: #4CAF50;
+    flex: 0; 
+    color: white;             
+    border: none;              
+    padding: 10px 20px;      
+    text-align: center;       
+    text-decoration: none;      
+    display: inline-block;      
+    font-size: 16px;           
+    margin: 10px 0;
+    cursor: pointer;           
+    border-radius: 5px;      
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#run-btn:hover {
+    background-color: #45a049; 
+    transform: translateY(-2px);
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .code-editor {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-editor {
+        width: 100%;
+    }
+}
